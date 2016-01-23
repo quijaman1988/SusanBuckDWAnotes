@@ -1,9 +1,8 @@
-## Lecture notes for Dynamic Web Applications
-## Fall 2015
-
+# Lecture notes for Dynamic Web Applications
+Fall 2015
 Short URL: <http://notes.dwa15.com>
 
-# Introduction
+## Introduction
 It's difficult to pick one definitive textbook for a course on web development. The technology we're working with rapidly changes and traditional textbooks often become quickly outdated.
 
 Given this, as an alternative to a traditional textbook, I share my lecture notes via this Github repository. These notes are your primary resources for this course, as they are customized to the material we're covering in lecture.
@@ -21,7 +20,7 @@ Use http://gitprint.com if you want to create .pdfs or printable versions of the
 
 
 ## Reporting issues
-Use Github's Issues section to report any issue with the notes. Examples of the kind of issues that may need reporting:
+Use Github's Issues section to report any issues with the notes. Examples of the kind of issues that may need reporting:
 + Typos
 + Code samples not working as described
 + Broken or moved links
@@ -52,7 +51,7 @@ __Laravel__
 + [Code Bright](http://daylerees.com/codebright/): Another Dayle Rees book. This one is actually on Laravel 4, not Laravel 5, so the material is out of date. However, Rees' explanation of concepts is really good and there are a lot of big picture lessons to be taken from this book.
 
 
-# Other resources
+## Other resources
 The following is a list of additional resources that may help you refresh your pre-requisite knowledge as you prepare for this course.
 
 __Lynda @ Harvard University__
