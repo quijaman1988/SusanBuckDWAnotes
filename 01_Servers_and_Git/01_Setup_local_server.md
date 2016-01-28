@@ -32,7 +32,7 @@ If you see **two little green dots** next to *Apache* and *MySQL Server*, you kn
 
 <img src='http://making-the-internet.s3.amazonaws.com/vc-mamp-mac-all-systems-go@2x.png' class='' style='max-width:723px; width:100%' alt=''>
 
-If either of these services don't start up, you'll want to read these notes: [__Debugging your local server__](dwa15-spring2016-notes/01_Servers_and_Git/02_Debugging_local_servers.md).
+If either of these services don't start up, you'll want to read these notes: [__Debugging your local server__](https://github.com/susanBuck/dwa15-spring2016-notes/blob/master/01_Servers_and_Git/02_Debugging_local_servers.md).
 
 
 ### Your first file
