@@ -29,7 +29,7 @@ With CurrPorts running, look for processes named `mysqld.exe` (MySQL), right cli
 __If you're having a port issue with Apache:__
 Follow the same steps as above, but search for processes labeled `httpd.exe` (short for *HTTP daemon*; it's equivalent to Apache) and terminate them.
 
-<img src='http://making-the-internet.s3.amazonaws.com/sysadmin-curr-ports@2x.png' style='max-width:px; width:100%' alt='CurrPorts'>
+<img src='http://making-the-internet.s3.amazonaws.com/sysadmin-curr-ports@2x.png' style='max-width:729px; width:100%' alt='CurrPorts'>
 
 You can also look under the __Local Port__ column to find processes that are using your default MySQL (`3306`) or Apache (`80`) port.
 
