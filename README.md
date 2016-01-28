@@ -2,7 +2,7 @@
 CSCI E-15 Dynamic Web Applications (<http://dwa15.com>)
 
 Spring 2016
-
+ 
 Short URL: <http://notes.dwa15.com>
 
 ## Printing
