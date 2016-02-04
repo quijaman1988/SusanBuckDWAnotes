@@ -28,10 +28,10 @@ The next thing to understand is that the placement of these characters in the st
 
 Looking at the example `-rw-r--r--`:
 
-* The first slot is used to indicate whether the file is a file or directory.
-* The next 3 slots (`rw-`) indicate whether the **User** who owns that file can read, write, or execute the file. In this case it says `rw-` so the User can read, write, but not execute this file.
+* The first slot is used to indicate whether this item is a file or directory. In this case it's `-` which indicates it's a file (if it was a `d` then it'd be a directory).
+* The next 3 slots (`rw-`) indicate whether the **User** who owns this item can read, write, or execute the file. In this case it says `rw-` so the User can read, write, but not execute this file.
 * The next 3 slots (`r--`) indicate whether the **Group** who owns that file can read, write, or execute the file. In this case it says `r--` so the Group can read but not write or execute this file.
-* The final 3 slots (`r--`) indicate whether everyone else can read, write, or execute the file. In this case it says `r--` so the Group can read but not write or execute this file.
+* The final 3 slots (`r--`) indicate whether **everyone** else can read, write, or execute the file. In this case it says `r--` so everyone can read but not write or execute this file.
 
 Here's a graphic to visualize the above description:
 
