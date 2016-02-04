@@ -21,7 +21,9 @@ Ideally, we'd like to use Apache's default port `80` and MySQL's default port `3
 ## Freeing ports on Windows
 First, __restart your computer__. Some students have reported that after a fresh install of XAMPP, this step is needed.
 
-If that doesn't work, download and open [CurrPorts](http://www.softpedia.com/get/Network-Tools/Network-Information/CurrPorts.shtml), a free program to easily see and terminate processes on Windows. There are other ways you can manage your ports on Windows, including via the Command Line or Task Manager, but I've found CurrPorts to be the most straightforward so it's worth the extra download.
+The next easiest fix to try is close Skype if you have it open, then trying to start your server again. Skype on Windows is known for causing port conflicts with local servers.
+
+If the above &ldquo;low hanging fruit&rdquo; steps don't work, download and open [CurrPorts](http://www.softpedia.com/get/Network-Tools/Network-Information/CurrPorts.shtml), a free program to easily see and terminate processes on Windows. There are other ways you can manage your ports on Windows, including via the Command Line or Task Manager, but I've found CurrPorts to be the most straightforward so it's worth the extra download.
 
 __If you're having a port issue with MySQL:__
 With CurrPorts running, look for processes named `mysqld.exe` (MySQL), right click them and choose *Kill Processes of Selected Ports*. Then right click again and choose *Close Selected TCP connections*.

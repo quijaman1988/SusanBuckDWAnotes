@@ -14,7 +14,9 @@ Some developers love CL editors, others prefer GUIs. If you're in the latter cat
 
 Given this, it's important to feel comfortable with a CL based editor. For our purposes, we'll use **nano**. It's not the most powerful CL editor, but it'll get the job done and it's the simplest to work with.
 
-Let's look at how to use nano...
+If you are already an experienced command line user with a favorite CL text editor, there's no reason you have to switch to nano; stick with what you're comfortable with.
+
+But if you're new to this, our examples will use nano, so below are instructions you'll want to get comfortable with.
 
 
 ## Opening files
