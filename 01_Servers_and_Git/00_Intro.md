@@ -34,7 +34,7 @@ Dual purpose:
 
 There are different implementations of version control software; in this course we'll use __Git__:
 
->> Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. Git is easy to learn and has a tiny footprint with lightning fast performance.
+>> *Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. Git is easy to learn and has a tiny footprint with lightning fast performance.*
 
 ### Benefits of Version Control
 
