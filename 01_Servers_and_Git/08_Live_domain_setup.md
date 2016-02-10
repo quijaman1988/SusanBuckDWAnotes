@@ -5,7 +5,7 @@ To set this up, we're going to configure a domain and subdomains for use with Di
 
 If you have an existing domain you'd like to use, that's fine. If not, you can create a new domain name via a service like **[Namecheap](http://www.namecheap.com/?aff=61057)**. As of this writing, Namecheap is offering free domain names for students (with a `.edu` email address) via <https://nc.me/>.
 
-After your create your domain, find your **DNS settings** within your domain companies' control panel. In Namecheap, these settings are found by finding the domain you'd like to configure in your **Domain List** and then clicking **Manage**. Then, find the tab for **Advanced DNS**
+After you create your domain, find your **DNS settings** within your domain companies' control panel. In Namecheap, these settings are found by finding the domain you'd like to configure in your **Domain List** and then clicking **Manage**. Then, find the tab for **Advanced DNS**
 
 In your DNS settings, you'll set both your `@` and `www` hostname to your DigitalOcean IP address.
 
