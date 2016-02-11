@@ -1,4 +1,4 @@
-*Preface: This topic, garbage collection, is not essential. The the following notes are included just as FYI for students who have experience with programming languages that requires you manage your own garbage collection and are curious how it works with PHP. Feel free to skim or skip this section if you'd like.*
+*Preface: This topic, garbage collection, is not essential. The following notes are included just as FYI for students who have experience with programming languages that require you manage your own garbage collection and are curious how it works with PHP. Feel free to skim or skip this section if you'd like.*
 
 
 ## Garbage collection
