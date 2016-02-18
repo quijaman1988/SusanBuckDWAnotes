@@ -33,7 +33,7 @@ Tip: You can see what version of OpenSSL you're using with this command:
 $ openssl version
 ```
 
-While the `0.9.8` version is out of date, there are no significant security concerns between this older version and the latest. Also note that 0.9.8 was not impacted by the infamous Heartbleed vulnerability discovered in 2015.
+While the `0.9.8` version is out of date, there are no significant security concerns between this older version and the latest. Also note that 0.9.8 was not impacted by the infamous Heartbleed vulnerability discovered in 2014.
 
 Despite this assurance, you may still want to upgrade OpenSSL, but you should be cautious about this as the upgrade may be incompatible with software on your computer that is using the older version OpenSSL.
 
