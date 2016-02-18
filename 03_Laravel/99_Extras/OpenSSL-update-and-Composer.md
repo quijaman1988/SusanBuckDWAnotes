@@ -1,9 +1,21 @@
 >> &ldquo;*OpenSSL is an open-source implementation of the SSL and TLS protocols. The core library, written in the C programming language, implements basic cryptographic functions and provides various utility functions. Wrappers allowing the use of the OpenSSL library in a variety of computer languages are available.*&rdquo; -[wikipedia: OpenSSL](https://en.wikipedia.org/wiki/OpenSSL)
 
 
-*Preface: If you have insight into best security practices regarding the following topic, I'd love to hear your thoughts. Don't hesitate to contact me to discuss.*
+## Preface
+If you have insight into best security practices regarding the following topic, I'm open to hearing your thoughts. Don't hesitate to contact me to discuss.
 
----
+## Summary
+Installing Composer on Mac will tell you your OpenSSL is out of date.
+
+If you're not experienced with making system changes, I suggest leaving it as is for the time being. The version warning is not a significant security concern, and the upcoming version of MAMP will have an updated version of OpenSSL bundled in rendering this a moot issue.
+
+If you want to learn more, or decide you do want to upgrade, you can read the full details below.
+
+The procedures outlined below have only been tested on Mac El Capitan 10.11.3 so far. Instructions may vary for different versions.
+
+
+
+## OpenSSL and Composer
 
 When installing Composer on Mac, you may be told your OpenSSL library is out of date:
 
@@ -23,7 +35,7 @@ Tip: You can see what version of OpenSSL you're using with this command:
 $ openssl version
 ```
 
-While the `0.9.8` version is out of date, there are no significant security concerns between this older version and the latest. Also note that 0.9.8 was not impacted by the infamous Heartbleed vulnerability discovered in 2014.
+While the `0.9.8` version is out of date, there are no significant security concerns between this older version and the latest. Also note that `0.9.8` was not impacted by the infamous Heartbleed vulnerability discovered in 2014.
 
 Despite this assurance, you may still want to upgrade OpenSSL, but you should be cautious about this as the upgrade may be incompatible with software on your computer that is using the older version of OpenSSL.
 
