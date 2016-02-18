@@ -1,23 +1,13 @@
 >> &ldquo;*OpenSSL is an open-source implementation of the SSL and TLS protocols. The core library, written in the C programming language, implements basic cryptographic functions and provides various utility functions. Wrappers allowing the use of the OpenSSL library in a variety of computer languages are available.*&rdquo; -[wikipedia: OpenSSL](https://en.wikipedia.org/wiki/OpenSSL)
 
+
+*Preface: If you have insight into best security practices regarding the following topic, I'd love to hear your thoughts. Don't hesitate to contact me to discuss.*
+
 ---
 
 When installing Composer on Mac, you may be told your OpenSSL library is out of date:
 
-```bash
-$ curl -sS https://getcomposer.org/installer | sudo php
-Password:
-Some settings on your machine may cause stability issues with Composer.
-If you encounter issues, try to change the following:
-
-The OpenSSL library (0.9.8r) used by PHP does not support TLSv1.2 or TLSv1.1.
-If possible you should upgrade OpenSSL to version 1.0.1 or above.
-
-Downloading...
-
-Composer successfully installed to: /Users/Susan/Desktop/composer.phar
-Use it: php composer.phar
-```
+<img src='http://making-the-internet.s3.amazonaws.com/laravel-openssl-message-from-composer@2x.png' style='max-width:687px; width:100%' alt='Installing Composer on Mac'>
 
 Despite the message, the installation of Composer completes. As the language of the message suggests, the upgrade is a suggestion, not a requirement.
 
@@ -35,7 +25,7 @@ $ openssl version
 
 While the `0.9.8` version is out of date, there are no significant security concerns between this older version and the latest. Also note that 0.9.8 was not impacted by the infamous Heartbleed vulnerability discovered in 2014.
 
-Despite this assurance, you may still want to upgrade OpenSSL, but you should be cautious about this as the upgrade may be incompatible with software on your computer that is using the older version OpenSSL.
+Despite this assurance, you may still want to upgrade OpenSSL, but you should be cautious about this as the upgrade may be incompatible with software on your computer that is using the older version of OpenSSL.
 
 Because of this potential conflict in versions, if you do upgrade, it's suggested that you keep the original `0.9.8` version to revert to if needed. Instructions for doing this are outlined in the next section.
 
