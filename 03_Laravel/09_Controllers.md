@@ -1,3 +1,8 @@
+See also: <https://laravel.com/docs/controllers>
+
+---
+
+
 ## What are Controllers?
 + Controller classes make up the **C** of the **MVC** structure; they act as the glue between the request, the Model and the resulting View (or data).
 

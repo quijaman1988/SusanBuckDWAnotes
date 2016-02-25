@@ -1,3 +1,7 @@
+See also: <https://laravel.com/docs/configuration#environment-configuration>
+
+---
+
 ## Purpose of environments
 Building a modern web application often entails running that application in different environments that have different configuration needs.
 

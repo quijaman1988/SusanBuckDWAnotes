@@ -1,3 +1,7 @@
+See also: <https://laravel.com/docs/routing>
+
+---
+
 Routes are declared using the `Route` facade in `app/Http/routes.php`
 
 Among other things, `Route` gives you access to these HTTP requests:
