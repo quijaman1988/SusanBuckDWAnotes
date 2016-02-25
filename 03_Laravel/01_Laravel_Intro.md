@@ -68,5 +68,5 @@ Expressive:
 ## Documentation
 
 * Docs: <http://laravel.com/docs>
-* API: <http://laravel.com/api/> or <http://devdocs.io/laravel/>
+* API: <https://laravel.com/api/5.2/> or <http://devdocs.io/laravel/>
 * Cheat Sheet: <http://www.linxiang.info/l5-cs/>

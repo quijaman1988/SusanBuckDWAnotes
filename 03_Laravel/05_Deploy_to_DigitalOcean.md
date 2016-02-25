@@ -115,7 +115,7 @@ This is because vendors are managed by Composer and *not* version controlled. Th
 Given this, you need to have Composer build your vendor's directory with this command:
 
 ```bash
-$ composer install --prefer-dist
+$ composer install
 ```
 
 When that command is complete (it may take a few minutes), if you view the contents of your live app, you should now see a `vendor/` directory.

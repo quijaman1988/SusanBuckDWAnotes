@@ -1,16 +1,18 @@
-Object Oriented Programming (OOP) helps create clean, maintainable, reusable code.
+Laravel is built with Object Oriented PHP, so understanding the fundamentals of Object Oriented Programming (OOP) will help you better understand Laravel.
 
-OOP provides more organization and structure than *procedural programming* (*do this, then this, then this*).
+In the following OOP primer, I'll cover the essentials.
 
-The following is a quick summary of the OOP concepts that will help you better understand working with Laravel.
-
-For a more in-depth look at OOP in PHP:
+For a more in-depth look at OOP in PHP, refer to the following resources:
 
 * [tutsplus.com: OOP PHP for Beginners](http://net.tutsplus.com/tutorials/php/object-oriented-php-for-beginners/)
 * Skim or Bookmark: [PHP.net OOP](http://www.php.net/manual/en/language.oop5.php)
 
 
+---
 
+Object Oriented Programming (OOP) helps create clean, maintainable, reusable code.
+
+OOP provides more organization and structure than *procedural programming* (*do this, then this, then this*).
 
 
 ## Classes
@@ -151,3 +153,35 @@ $user = new User();
 ```
 
 Given this, if you have statements that you want executed *everytime* a class is instantiated, put those statements in the construct method.
+
+
+
+
+## Statically using classes
+Generally, when using your Classes you first instantiate an Object from that class.
+
+For example, if you had a Class called Email, you'd do something like this:
+
+```php
+$email = new Email();
+```
+
+And then maybe you'd write something like this (assuming your Email Class had a `send()` method):
+
+```php
+$email->send('jamal@gmail.com','Hello!');
+```
+
+Typically, instantiating Objects from Classes like this is the way to go.
+
+However, you can also **statically** invoke a method from a Class, which skips the step of invoking an Object of that Class.
+
+This is done using the class name, followed by `::`, then the method name. For example:
+
+```php
+Email::send('jamal@gmail.com','Hello!');
+```
+
+The downside of statically using Classes, is you don't have the benefit of storing properties with the object, which is one of the great advantages of OOP.
+
+However, there are some instances where you might have a Class with some miscellaneous utility methods, that don't necessarily have related data. In that case, statically using that class is acceptable.

@@ -58,7 +58,7 @@ Route::get('/new', function() {
 
 Route::post('/new', function() {
 
-	$input =  Input::all();
+	$input = Input::all();
 	print_r($input);
 
 });
@@ -107,22 +107,3 @@ $ php artisan route:list
 ```
 
 Note: The `php artisan` command must always be run from *within* your application.
-
-
-
-
-## Digging Deeper: Facades and reading the API
-
-Laravel makes frequent use of Facades:
-
->> Facades provide a "static" interface to classes that are available in the application's IoC container. Laravel ships with many facades, and you have probably been using them without even knowing it! Laravel "facades" serve as "static proxies" to underlying classes in the IoC container, providing the benefit of a terse, expressive syntax while maintaining more testability and flexibility than traditional static methods. -[src](http://laravel.com/docs/facades#facade-class-reference)
-
-[List of facades and their underlying class](http://laravel.com/docs/facades#facade-class-reference).
-
-For example:
-`Route` is a Facade for the `Router` class. Once you know that, it makes finding information in the API docs easier.
-
-[API: Router](http://devdocs.io/laravel/api/5.1/illuminate/routing/router) >
-[API: Router get](http://devdocs.io/laravel/api/5.1/illuminate/routing/router#method_get)
-
-<img src='http://making-the-internet.s3.amazonaws.com/laravel-route-get@2x.png' class='' style='max-width:716px; width:100%' alt='Route get'>
