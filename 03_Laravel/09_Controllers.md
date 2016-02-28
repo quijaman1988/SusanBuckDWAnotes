@@ -91,7 +91,7 @@ For an example, let's build a RESTful interface for a Tag resource in the Fooboo
 To start, you can have Artisan generate your Tag controller for you:
 
 ```bash
-php artisan make:controller TagController
+php artisan make:controller TagController --resource
 ```
 
 If you open the resulting `TagController.php` you should see the following 7 methods:
