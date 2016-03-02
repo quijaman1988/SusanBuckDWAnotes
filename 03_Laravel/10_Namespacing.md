@@ -35,7 +35,7 @@ $message2 = new AutoCaller\Message;
 ## Autoloading
 Not only does namespacing help prevent name collisions, it also helps power [__autoloading__](http://php.net/manual/en/language.oop5.autoload.php).
 
-Autoloading is a PHP functionality that makes it so you use classes in your code without having to explicitly require class files.
+Autoloading is a feature PHP has which makes it possible to invoke classes in your code without having to explicitly require the corresponding class files.
 
 In other words, without autoloading you might have to write:
 
@@ -85,16 +85,16 @@ This consortium is called the [__FIG - Framework Interoperability Group__](http:
 
 One of the things that FIG has done is to develop best practices called __PSR - PHP Standard Recommendations__.
 
-So far there are 5 PSRs:
+Currently there are 5 active PSRs:
 
-+ [PSR-0: Autoloading Standard](http://www.php-fig.org/psr/psr-0/)
 + [PSR-1: Basic Coding Standard](http://www.php-fig.org/psr/psr-1/)
 + [PSR-2: Coding Style Guide](http://www.php-fig.org/psr/psr-2/)
 + [PSR-3: Logger Interface](http://www.php-fig.org/psr/psr-3/)
-+ [PSR-4: Improved Autoloading](http://www.php-fig.org/psr/psr-4/)
++ [PSR-4: Autoloading Standard](http://www.php-fig.org/psr/psr-4/)
++ [PSR-6: Caching Interface](http://www.php-fig.org/psr/psr-6/)
++ [PSR-7: HTTP Message Interface](http://www.php-fig.org/psr/psr-7/)
 
-The PSRs specific to namespacing/autoloading is PSR-0 and PSR-4. PSR-4 is an improved version of PSR-0, and the standard used in Laravel 5, so that's the one we'll focus on.
-
+The PSRs specific to namespacing/autoloading is PSR-4, so that's the one we're going to focus on.
 
 
 
