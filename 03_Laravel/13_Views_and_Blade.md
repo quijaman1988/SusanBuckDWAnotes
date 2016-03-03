@@ -1,6 +1,6 @@
 See also:
 + <https://laravel.com/docs/views>
-+ <https://laravel.com/docs/views>
++ <https://laravel.com/docs/blade>
 
 ---
 
@@ -292,13 +292,9 @@ It should look exactly as it did before:
 
 ## Practice
 
-Following the above patterns, implement views for these two other existing routes:
+Following the above patterns, implement views for at least two other existing routes:
 
 ```
 Route::get('/books', 'BookController@getIndex');
 Route::get('/books/create', 'BookController@getCreate');
 ```
-
-
-## Tips
-+ Tracing errors coming from your views can be tricky because of how blade files are translated and cached. [In this 5 minute video](https://youtu.be/tC2bVzGHY2g), I discuss strategies for tracking down errors in view files.
