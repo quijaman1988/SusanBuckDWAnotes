@@ -5,7 +5,7 @@
 > *What are namespaces? In the broadest definition namespaces are a way of **encapsulating items**. This can be seen as an abstract concept in many places. For example, in any operating system directories serve to group related files, and act as a namespace for the files within them. As a concrete example, the file `foo.txt` can exist in both directory `/home/greg` and in `/home/other`, but two copies of `foo.txt` cannot co-exist in the same directory. In addition, to access the `foo.txt` file outside of the `/home/greg` directory, we must prepend the directory name to the file name using the directory separator to get `/home/greg/foo.txt`. This same principle extends to namespaces in the programming world.*
 
 
-Namespacing is a principle in programming that allows us to prevent **name collisions**. Name collisions occurs when two different packages of code try to use the same class names.
+Namespacing is a principle in programming that allows us to prevent **name collisions**. Name collisions occur when two different packages of code try to use the same class names.
 
 For example, let's imagine two hypothetical packages of code your application might want to implement:
 

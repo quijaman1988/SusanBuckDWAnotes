@@ -61,7 +61,7 @@ The benefit of these latter two conventions is it makes it easy to correlate con
 With your new view file created, fill it with the following content:
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Show Book</title>

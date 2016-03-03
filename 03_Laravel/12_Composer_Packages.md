@@ -1,6 +1,6 @@
 ## What is a package?
 
-Packages are a term used in Composer to describe bundles of softwares that developers create and share.
+Packages are a term used in Composer to describe bundles of software that developers create and share.
 
 Laravel itself is a package (that depends on many other packages).
 
@@ -143,7 +143,7 @@ Continuing with the debugbar package we've already installed, we'll start by ref
 
 This instruction is a bit sparse and assumes some pre-existing Laravel knowledge, so let's expound:
 
-The first but in the instructions is telling you you need to add...
+The first part in the instructions is telling you you need to add...
 
 ```php
 Barryvdh\Debugbar\ServiceProvider::class,
