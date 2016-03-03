@@ -1,8 +1,8 @@
-In the notes that come after this, we'll be discussing Routing, which is the first instance where we'll see Laravel use something called **facades*.
+In the notes that come after this, we'll be discussing Routing, which is the first instance where we'll see Laravel use something called **facades**.
 
 Facades are used throughout Laravel, so before we go any further we should cover what a facade is.
 
-A facade is a &ldquo;static proxy&rdquo; to a underlying class provided by Laravel.
+__A facade is a &ldquo;static proxy&rdquo; to a underlying class provided by Laravel.__
 
 Here's an example using Laravel's `Hash` facade:
 
@@ -45,3 +45,11 @@ To help with this, here's a [list of facades and their underlying classes](http:
 
 For example:
 `Route` is a Facade for the `Router` class. Once you know that, it makes finding information in the API docs easier: [API: Router](http://devdocs.io/laravel/api/5.2/illuminate/routing/router).
+
+
+## More info...
+
+To learn more about the facade design pattern check out this article: [What Are Laravel 5.0 Facades?](http://code.tutsplus.com/tutorials/what-are-laravel-50-facades--cms-25347)
+
+
+> &ldquo;*[...] the facade design pattern is a structural pattern that defines a simplified interface to a more complex subsystem. The pattern is based on creating a simple facade interface in front of the collection of required logic and methods. The facade itself maintains the dependencies.*&rdquo;
