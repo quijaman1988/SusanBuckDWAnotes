@@ -54,7 +54,7 @@ class BookController extends Controller {
 
 + Put Controller class files `/app/Http/Controllers/`. This directory is psr-4 loaded in `composer.json`, so anything you put here will be readily available using the appropriate namespace.
 
-+ You can technically call a controller class file anything you want, but it's a convention to suffix it with `Controller` (ex: `BookController`).
++ You can technically call a controller class file anything you want, but it's a convention to suffix it with `Controller` and use [upper CamelCase style](https://en.wikipedia.org/wiki/CamelCase#Variations_and_synonyms) (ex: `BookController`).
 
 + Your controller class should extend Laravel's `Controller`, which also exists in `/app/Http/Controllers/`. This is where you can put common logic shared by all your controllers.
 
@@ -62,9 +62,9 @@ class BookController extends Controller {
 
 + One naming convention for your action methods is to prefix with the HTTP verb (`get,` `post` or `any`) . For example: `getSignup()` and `postSignup()`.
 
-+ Each action method is defined in camelCase, which is required.
++ Each action method is defined in [lower camelCase style](https://en.wikipedia.org/wiki/CamelCase#Variations_and_synonyms), which is required (ex: `getSignup()`).
 
-+ For actions with multiple words, dash-syntax on the URL will be translated to camelCase in the action. For example, a URL like `/generate-new-password` would translate to a method `getGenerateNewPassword`.
++ For actions with multiple words, dash-syntax on the URL will be translated to lower camelCase in the action. For example, a URL like `/generate-new-password` would translate to a method `getGenerateNewPassword`.
 
 
 

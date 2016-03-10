@@ -179,7 +179,7 @@ But, there's more. Further down in the Debugbar documentation, there's some *Usa
 
 Let's take those instructions and test them out in a `/practice` route:
 
-```
+```php
 Route::get('/practice', function() {
 
     $data = Array('foo' => 'bar');
@@ -252,7 +252,9 @@ There's two alternative options:
 
 __Alternative Option 1__:
 
-You can implement the `use` statement at the top of your PHP file to indicate you'll be using that class. Then, when you use it, you can simply say `new Random()`.
+You can implement the [`use`](http://php.net/manual/en/language.namespaces.importing.php) statement at the top of your PHP file to import the class. Then, when you use the class, you can simply say `new Random()`.
+
+Example:
 
 ```php
 use \Rych\Random\Random;

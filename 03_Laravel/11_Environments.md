@@ -96,13 +96,13 @@ This says the `url` will be whatever `APP_URL` is set to in the `.env` file, and
 ## What's my current environment?
 You can find out the current environment that your application is running in with this command:
 
-```
+```php
 echo \App::environment();
 ```
 
 You can also have Artisan tell you:
 
-```
+```bash
 $ php artisan env
 Current application environment: local
 ```
