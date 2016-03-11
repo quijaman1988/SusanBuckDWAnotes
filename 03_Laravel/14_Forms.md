@@ -85,6 +85,10 @@ For another scary example, consider the following URL:
 http://bankofamerica.com/withdraw?account=Victim&amount=1000000&for=Hacker
 ```
 
+In all of the above examples, the hacker is taking advantage of the fact that the victim user is potentially already logged in on the victim site.
+
+(Side note: [here's the code used in the CSRF example discussed in Lecture 7](https://gist.github.com/susanBuck/dc9bdf3eccb15314f31d))
+
 To prevent CSRF attacks you want to verify that the origin of requests on your site are coming from within your site. This is done by sending a unique, encrypted token with each form submission, the CSRF token.
 
 When the form submission is received by your application, Laravel automatically checks the token to make sure it's valid, thereby verifying the form submissions is legitimate.
