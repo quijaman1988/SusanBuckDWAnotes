@@ -1,7 +1,7 @@
 ## Intro
-Databases are an essential component of most web applications; having a database allows your app to have &ldquo;memory&rdquo; over time by storing data that is easily retrieved, sorted, and altered.
+Databases are an essential component of most web applications; having a database allows your web application to have &ldquo;memory&rdquo; over time by storing data that is easily retrieved and manipulated.
 
-Databases consist of **tables**. For example, you might have a table to keep track of all your books or users.
+Databases consist of **tables**. For example, you might have a table to keep track of *users* that have accounts on your site.
 
 Each table is like a spreadsheet, with **fields** (aka **columns**) describing your data (e.g. username, email, first name, last name) and **rows** which hold that data.
 
@@ -25,7 +25,7 @@ In addition to providing you with an Apache server, MAMP and XAMPP also provide 
 Now's a good time to make sure MySQL is running in MAMP/XAMPP:
 <img src='http://making-the-internet.s3.amazonaws.com/mysql-running-in-xampp-and-mamp@2x.png' style='max-width:921px; width:100%' alt='MySQL running in XAMPP and MAMP'>
 
-If MySQL is not running refer to these notes: [Debugging your local server](https://github.com/susanBuck/dwa15-fall2015-notes/blob/master/01_Servers_and_Git/99_Extras/05_Debugging_local_server.md).
+If MySQL is not running refer to these notes: [Debugging your local server](https://github.com/susanBuck/dwa15-spring2016-notes/blob/master/01_Servers_and_Git/02_Debugging_local_servers.md).
 
 
 
@@ -33,8 +33,8 @@ If MySQL is not running refer to these notes: [Debugging your local server](http
 ## Working with your database
 There are a few ways you can interact with your MySQL database:
 
-1. Via MySQL command line
-2. Via a database manager such as phpMyAdmin
+1. Via a database manager such as phpMyAdmin
+2. Via MySQL command line
 3. Via your application code
 
 In these notes we're going to give a sample of all of the above.
@@ -49,7 +49,7 @@ To visit phpMyAdmin on MAMP or XAMPP go to **<http://localhost/phpmyadmin>**.
 
 <img src='http://making-the-internet.s3.amazonaws.com/laravel-phpmyadmin@2x.png' class='' style='max-width:1089px; width:100%' alt='phpMyAdmin Screenshot'>
 
-Alternatively, you can also download a desktop database application; here are some suggestions:
+As an alternative to phpMyAdmin, you can also download a desktop database application; here are some suggestions:
 
 + Mac: [SequelPro](http://www.sequelpro.com/)
 + Windows: [HeidiSQL](http://www.heidisql.com/)
@@ -135,7 +135,7 @@ Looking at the example data above, we came up with the following design:
 
 <img src='http://making-the-internet.s3.amazonaws.com/laravel-books-table-design@2x.png' style='max-width:480px; width:100%' alt='books table design'>
 
-To understand the **MySQL data types** chosen for each field in this table, [visit this reference of common MySQL data types](https://github.com/susanBuck/dwa15-fall2015-notes/blob/master/03_Laravel/15_Common_MySQL_Data_Types.md).
+To understand the **MySQL data types** chosen for each field in this table, [visit this reference of common MySQL data types](https://github.com/susanBuck/dwa15-spring2016-notes/blob/master/03_Laravel/17_Common_MySQL_Data_Types.md).
 
 In phpMyAdmin, this is what the above `books` table design looks like:
 
