@@ -233,7 +233,7 @@ Getting your migrations right the first time can be challenging, especially if y
 
 In many cases, you'll forget fields that you needed to add. Yes, you can create new migrations to add new fields, but starting off, it'd be nice to have single migrations for each new table, without a bunch of new migrations for each field you forget or mistake you need to fix.
 
-There are several Artisan migrate commands that seem like they might help in this situation such as `migrate:refresh` and `migrate:reset` (ref: [Rolling Back Migrations](http://laravel.com/docs/5.1/migrations#rolling-back-migrations)).
+There are several Artisan migrate commands that seem like they might help in this situation such as `migrate:refresh` and `migrate:reset` (ref: [Rolling Back Migrations](https://laravel.com/docs/migrations#rolling-back-migrations)).
 
 These commands are useful but they assume your `down()` functions are written perfectly, and that you haven't had any migrations abort part-way through because of some issue. These assumptions aren't always correct, especially when you're first learning about migrations and building a lot of tables.
 
