@@ -84,7 +84,7 @@ To do this, we'll refer to the plan we came up with in the Database Primer notes
 
 <img src='http://making-the-internet.s3.amazonaws.com/laravel-books-table-design@2x.png' style='max-width:480px; width:100%' alt='books table design'>
 
-To understand the MySQL data types chosen each field, [refer to this table](https://github.com/susanBuck/dwa15-fall2015-notes/blob/master/03_Laravel/15_Common_MySQL_Data_Types.md).
+To understand the MySQL data types chosen each field, [refer again to this table](https://github.com/susanBuck/dwa15-spring2016-notes/blob/master/03_Laravel/17_Common_MySQL_Data_Types.md).
 
 For all our tables/fields, we'll follow these suggested naming conventions:
 
