@@ -2,11 +2,11 @@ With the topic of __migrations__ and __seeding__ behind us, the next logical ste
 
 Here is a summary of the steps we'll take (all on the production server) to get this done:
 
-1. Make sure your production code is up to date
+1. Make sure your production code is up to date.
 2. Find your default MySQL password.
 3. Create a new database.
 4. Set up these credentials in your production `.env` file
-5. Run migrations (to build tables) and seeders (to fill tables)
+5. Run migrations (to build tables) and seeders (to fill tables).
 
 
 
@@ -93,7 +93,12 @@ DB_USERNAME=homestead
 DB_PASSWORD=secret
 ```
 
-Update these settings, setting `DB_HOST` to be `localhost`, `DB_DATABASE` to be `foobooks` (or whatever your project database name is), `DB_USERNAME` to be `root`, and `DB_PASSWORD` to be the same MySQL password you used in the above step
+Update these configs, setting...
+
++ `DB_HOST` to be `localhost`
++ `DB_DATABASE` to be `foobooks` (or whatever your project database name is)
++ `DB_USERNAME` to be `root`
++ `DB_PASSWORD` to be the same MySQL password you used in the above step.
 
 Example after edits:
 ```bash
@@ -186,7 +191,7 @@ CREATE DATABASE foobooks;
 
 ## Troubleshooting
 
-### Access denied
+### Error: `Access denied`
 If you try and run your migrations but they fail, it may be because the DB credentials you put into `.env` are incorrect. If that happens, you may see a message similar to this:
 
 ```
@@ -196,7 +201,7 @@ SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password
 If this happen, double check your credentials and try again.
 
 
-### Class BooksTableSeeder does not exist
+### Error: `Class BooksTableSeeder does not exist`
 If you see a message telling you your seeder files does not exist, for example...
 
 ```
@@ -220,10 +225,12 @@ If you wish to install it, you can follow this tutorial: [DigitalOcean: How to I
 The following command can be used to change the default MySQL password for `root`:
 
 ```sql
-mysqladmin -u root -p'oldpassword' password newpassword
+mysqladmin -u root -p'currentpassword' password newpassword
 ```
+(the lack of a space before `'currentpassword'` is intentional)
 
-Note: If you change this password, you'll want to update what's in your `.env` file.
+
+Note: If you change your password, remember to update what's in your `.env` file.
 
 
 ### mysql_secure_installation
@@ -245,4 +252,4 @@ If you are running multiple applications/databases on the same server, it's more
 
 In the interest of time, and to reduce our room for error, we're not following this practice in this course. In a real world application, however, you should consider implementing this security best practice.
 
-If you want to learn more you can read this article: [DigitalOcean: How To Create a New User and Grant Permissions in MySQL](https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql)
+If you want to learn more you can read this article: [DigitalOcean: How To Create a New User and Grant Permissions in MySQL](https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql).

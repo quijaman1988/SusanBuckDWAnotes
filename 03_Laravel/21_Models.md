@@ -12,7 +12,7 @@ These note will briefly discuss the QueryBuilder, but focus mostly on Models.
 
 
 ## Laravel's Query Builder
-Laravel's QueryBuilder is a Laravel component (accessed by the [DB Facade](http://laravel.com/api/5.0/Illuminate/Support/Facades/DB.html)) which makes it easy to create and run database queries.
+Laravel's QueryBuilder is a Laravel component (accessed by the [DB Facade](https://laravel.com/api/5.2/Illuminate/Support/Facades/DB.html)) which makes it easy to create and run database queries.
 
 ### Read
 For example, here's how you would retrieve all the rows from the `books` table using the DB `get()` method:
@@ -186,6 +186,7 @@ echo 'Added: '.$book->title;
 
 
 
+
 ## CRUD - Reading
 Next, let's look at the Eloquent `all()` method to *read* data from a table.
 
@@ -344,7 +345,7 @@ Here's a big picture view of this:
 
 <img src='http://making-the-internet.s3.amazonaws.com/laravel-orm-books@2x.png' style='max-width:1059px; width:100%' alt='ORM Diagram'>
 
-If any of the above discussion of objects, properties, etc. is confusing, taking a moment to refresh your memory on [Object Oriented Programming](https://github.com/susanBuck/dwa15-fall2015-notes/blob/master/03_Laravel/99_Extras/06_OOP_Summary.md).
+If any of the above discussion of objects, properties, etc. is confusing, taking a moment to refresh your memory on [Object Oriented Programming](https://github.com/susanBuck/dwa15-spring2016-notes/blob/master/03_Laravel/00_OOP_Primer.md).
 
 
 
