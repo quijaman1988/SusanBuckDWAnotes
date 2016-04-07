@@ -173,6 +173,11 @@ Show all the rows in a table:
 SELECT * FROM books;
 ```
 
+Show all the rows in a table in a vertical fashion (can more be readable than the default horizontal table layout):
+```
+SELECT * FROM books\G;
+```
+
 If something goes wrong with your migrations or seeders and you want to &ldquo;start over&rdquo;, you could delete individual tables...
 
 ```
