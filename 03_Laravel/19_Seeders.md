@@ -81,7 +81,9 @@ public function run()
 
 The above code is using Laravel's [QueryBuilder](http://laravel.com/docs/queries) to insert the books.
 
-Note: For the `created_at` and `updated_at` fields, we used the `Carbon::now()->toDateTimeString()` method to generate a new timestamp based on the current time.
+__Carbon Time__
+
+For the `created_at` and `updated_at` fields, we used the `Carbon::now()->toDateTimeString()` method to generate a new timestamp based on the current time.
 
 Carbon is a package that comes with Laravel and provides many date/time methods; you can read more about Carbon here: <https://github.com/briannesbitt/Carbon>.
 
@@ -102,7 +104,6 @@ Next, open `database/seeds/DatabaseSeeder.php` where you should see this existin
 <?php
 
 use Illuminate\Database\Seeder;
-use Illuminate\Database\Eloquent\Model;
 
 class DatabaseSeeder extends Seeder
 {
@@ -113,11 +114,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Model::unguard();
-
         // $this->call(UserTableSeeder::class);
-
-        Model::reguard();
     }
 }
 ```
@@ -167,9 +164,10 @@ $ php artisan migrate:refresh --seed
 
 
 
-## Important - Seeding in P4
+## Reminder: Seeding in P4
 In addition to migrations, it's required that your P4 utilizes database seeding. This practice makes it quick for us to easily build your database tables and quickly fill them with sample data so that we can more efficiently help you troubleshoot.
 
 
-## Reference
-+ [Docs: Seeding](http://laravel.com/docs/seeding)
+
+## Read More
++ <http://laravel.com/docs/seeding>

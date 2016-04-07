@@ -1,7 +1,3 @@
-See also: <https://laravel.com/docs/configuration#environment-configuration>
-
----
-
 ## Purpose of environments
 Building a modern web application often entails running that application in different environments that have different configuration needs.
 
@@ -120,8 +116,12 @@ Note how the default environment is `production` if one is not set.
 
 
 
-
 ## Use of `.env.example`
 Laravel comes with a `.env.example` file. While this file is not actually used anywhere, it can serve as a good template for suggested settings for your app.
 
 This way, if you deploy to a new server, or a new developer clones your app to begin working on it, they can use `.env.example` as a starting point for their own `.env` file.
+
+
+
+## Read More
++ <https://laravel.com/docs/configuration#environment-configuration>

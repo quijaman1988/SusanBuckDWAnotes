@@ -1,10 +1,3 @@
-See also:
-+ <https://laravel.com/docs/views>
-+ <https://laravel.com/docs/blade>
-
----
-
-
 ## What are Views?
 
 > &ldquo;*Views contain the HTML served by your application and separate your controller/application logic from your presentation logic.*&rdquo; -[ref](https://laravel.com/docs/views)
@@ -298,3 +291,9 @@ Following the above patterns, implement views for at least two other existing ro
 Route::get('/books', 'BookController@getIndex');
 Route::get('/books/create', 'BookController@getCreate');
 ```
+
+
+
+## Read More
++ <https://laravel.com/docs/views>
++ <https://laravel.com/docs/blade>

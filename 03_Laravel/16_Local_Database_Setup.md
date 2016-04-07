@@ -122,3 +122,8 @@ Note: The above route is echo'ing a lot of content to the page directly from you
 
 ## Conclusions
 With your database setup and your connection confirmed, you're ready to move on to **Migrations** in order to build your tables.
+
+
+
+## Read More
++ <https://laravel.com/docs/database#introduction>

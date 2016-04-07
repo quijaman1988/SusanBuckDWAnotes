@@ -65,8 +65,9 @@ Expressive:
 	* Seeding
 * Clear documentation and supportive community
 
-## Documentation
 
+
+## Documentation
 * Docs: <http://laravel.com/docs>
 * API: <https://laravel.com/api/5.2/> or <http://devdocs.io/laravel/>
 * Cheat Sheet: <http://www.linxiang.info/l5-cs/>

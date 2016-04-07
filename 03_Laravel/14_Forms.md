@@ -263,6 +263,6 @@ Laravel 4 included a `Form` helper that included lots of helpers to generate for
 
 
 ## Read more
-+ [Docs: CSRF Protection](http://laravel.com/docs/routing#csrf-protection)
-+ [Docs: Middleware](http://laravel.com/docs/middleware)
-+ [Docs: Accessing the request](http://laravel.com/docs/requests#accessing-the-request)
++ <http://laravel.com/docs/routing#csrf-protection>
++ <http://laravel.com/docs/middleware>
++ <http://laravel.com/docs/requests#accessing-the-request>

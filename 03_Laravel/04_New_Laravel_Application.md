@@ -184,3 +184,8 @@ $ php artisan key:generate
 
 ## Misc
 * When using the `composer create-project` command, we added the `--prefer-dist ` flag. You can read more about `--prefer-dist` and how it differs from `--prefer-source` [here](https://getcomposer.org/doc/03-cli.md#install).
+
+
+
+## Read More
++ <https://laravel.com/docs/installation>

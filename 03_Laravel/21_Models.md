@@ -367,7 +367,6 @@ As an example of this, read about [Ruby On Rail's Active Records](http://guides.
 
 
 
-
-## Reference
-+ [Docs: QueryBuilder](http://laravel.com/docs/queries)
-+ [Docs: Eloquent](http://laravel.com/docs/eloquent)
+## Read More
++ <http://laravel.com/docs/queries>
++ <http://laravel.com/docs/eloquent>

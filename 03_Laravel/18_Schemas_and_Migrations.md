@@ -262,3 +262,7 @@ if(App::environment('local')) {
 The above route has been wrapped in an if statement so it will only run in your local environment (to avoid accidentally deleting your production database).
 
 Be very cautious with this route as it's very powerful. Only use it in prototypes, not in real world applications.
+
+
+## Read More
++ <http://laravel.com/docs/migrations>

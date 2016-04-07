@@ -133,6 +133,5 @@ In the above example, we only saw two rules: `required` and `min`. There are cur
 
 
 
-
 ## Read more
-+ [Docs: Validation](http://laravel.com/docs/validation)
++ <http://laravel.com/docs/validation>

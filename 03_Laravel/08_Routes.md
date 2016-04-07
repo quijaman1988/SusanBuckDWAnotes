@@ -1,7 +1,3 @@
-See also: <https://laravel.com/docs/routing>
-
----
-
 Routes are declared using the `Route` facade in `app/Http/routes.php`
 
 Among other things, `Route` gives you access to these HTTP requests:
@@ -101,7 +97,6 @@ Route::get('/practice', function() {
 
 
 ## Artisan routes
-
 Artisan is a PHP command line tool that ships with Laravel and provides many shortcuts and utilities for working with your app.
 
 For our first example of what Artisan can do, have it tell you what routes are set up in your application:
@@ -111,3 +106,8 @@ $ php artisan route:list
 ```
 
 Note: The `php artisan` command must always be run from *within* your application.
+
+
+
+## Read More
++ https://laravel.com/docs/routing

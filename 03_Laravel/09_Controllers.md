@@ -1,8 +1,3 @@
-See also: <https://laravel.com/docs/controllers>
-
----
-
-
 ## What are Controllers?
 + Controller classes make up the **C** of the **MVC** structure; they act as the glue between the request, the Model and the resulting View (or data).
 
@@ -165,3 +160,8 @@ To get around this, you'll have to create a mini-form with the DELETE method. In
 	<a href='javascript:void(0)' onClick='parentNode.submit();return false;'>Delete</a>
 {{ Form::close() }}
 ```
+
+
+
+## Read More
++ <https://laravel.com/docs/controllers>
