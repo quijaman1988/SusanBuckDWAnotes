@@ -43,22 +43,26 @@ If you've installed a new Laravel application since March 23rd, you may notice t
 1. The web middleware group is no longer included in `routes.php`
 2. If you try to add it (following the example you see in foobooks) it will break things&mdash; for example, your error messages from validation will stop showing up.
 
-The reason this is happening is because on [March 23rd](https://github.com/laravel/laravel/commit/5c30c98db96459b4cc878d085490e4677b0b67ed), Laravel made a change to the boilerplate application code such that the web middleware group is automatically applied to all your routes via your RoutesServiceProvider; as a result, the route middleware group in the routes file is no longer needed.
+The reason this is happening is because on [March 23rd](https://github.com/laravel/laravel/commit/5c30c98db96459b4cc878d085490e4677b0b67ed), Laravel made a change to the boilerplate application code such that the web middleware group is automatically applied to all your routes via `app/providers/RoutesServiceProvider.php`; as a result, the route middleware group in the routes file is no longer needed.
 
 You'll only notice this if you do a brand new Laravel installation, not if you update your current installation (ala `composer update`). The reason is because the change was not made to the Laravel core code, but to the boilerplate code that is not impacted by updates.
 
-So now we have a bit of a disconnect in how the web middle ware is being applied:
+So now we have a disconnect in how the web middleware is being applied:
 
 + &ldquo;old way&rdquo; = Apply via group in `routes.php`
 + &ldquo;new way&rdquo; = Apply globally via `RoutesServiceProvider.php`
 
-How this is seen across our apps so far:
-+ Our class example `foobooks` is doing things via the &ldquo;old way&rdquo;.
-+ Your P2 is also probably doing things via the &ldquo;old way&rdquo;.
+How this is manifested across our apps so far:
++ Our class example `foobooks` is doing things the &ldquo;old way&rdquo;.
++ Your P2 is also probably doing things the &ldquo;old way&rdquo;.
 + If you created P3 before March 23, it's doing it the &ldquo;old way" otherwise it's doing it the &ldquo;new way&rdquo;.
-+ Assuming you first create(d) P4 after March 23rd, it will do things via the &ldquo;new way&rdquo;.
++ Assuming you first create(d) P4 after March 23rd, it will do things the &ldquo;new way&rdquo;.
 
-To resolve this disconnect, I'm going to update the `foobooks` app to the &ldquo;new way&rdquo; and show you how to do it (below). It's totally up to you whether you want to update P2 and P3, as the &ldquo;old way&rdquo; still works perfectly fine.
+To resolve this disconnect, I'm going to update the `foobooks` app to the &ldquo;new way&rdquo; and show you how to do it.
+
+It's totally up to you whether you want to update P2 and P3, as the &ldquo;old way&rdquo; still works perfectly fine.
+
+The benefit of updating is just for consistency amongst projects and with the current Laravel documentation.
 
 
 ## Update procedure
