@@ -86,9 +86,9 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('/books/create', 'BookController@postCreate');
 
 });
+```
 
 After:
-
 ```php
 <?php
 
