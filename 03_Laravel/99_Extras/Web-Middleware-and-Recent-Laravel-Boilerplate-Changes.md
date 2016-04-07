@@ -52,17 +52,26 @@ So now we have a disconnect in how the web middleware is being applied:
 + &ldquo;old way&rdquo; = Apply via group in `routes.php`
 + &ldquo;new way&rdquo; = Apply globally via `RoutesServiceProvider.php`
 
+<<<<<<< HEAD
 How this is manifested across our apps so far:
 + Our class example `foobooks` is doing things the &ldquo;old way&rdquo;.
 + Your P2 is also probably doing things the &ldquo;old way&rdquo;.
+=======
+How this is seen across our apps so far:
++ Our class example `foobooks` is doing things via the &ldquo;old way&rdquo;.
+>>>>>>> 0411ed41d072022ccd08983c126f4bc21e6499db
 + If you created P3 before March 23, it's doing it the &ldquo;old way" otherwise it's doing it the &ldquo;new way&rdquo;.
 + Assuming you first create(d) P4 after March 23rd, it will do things the &ldquo;new way&rdquo;.
 
+<<<<<<< HEAD
 To resolve this disconnect, I'm going to update the `foobooks` app to the &ldquo;new way&rdquo; and show you how to do it.
 
 It's totally up to you whether you want to update P2 and P3, as the &ldquo;old way&rdquo; still works perfectly fine.
 
 The benefit of updating is just for consistency amongst projects and with the current Laravel documentation.
+=======
+To resolve this disconnect, I'm going to update the `foobooks` app to the &ldquo;new way&rdquo; and show you how to do it (below). It's totally up to you whether you want to update P3, as the &ldquo;old way&rdquo; still works perfectly fine.
+>>>>>>> 0411ed41d072022ccd08983c126f4bc21e6499db
 
 
 ## Update procedure
