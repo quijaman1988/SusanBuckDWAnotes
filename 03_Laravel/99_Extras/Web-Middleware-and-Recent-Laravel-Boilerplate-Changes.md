@@ -54,11 +54,10 @@ So now we have a bit of a disconnect in how the web middle ware is being applied
 
 How this is seen across our apps so far:
 + Our class example `foobooks` is doing things via the &ldquo;old way&rdquo;.
-+ Your P2 is also probably doing things via the &ldquo;old way&rdquo;.
 + If you created P3 before March 23, it's doing it the &ldquo;old way" otherwise it's doing it the &ldquo;new way&rdquo;.
 + Assuming you first create(d) P4 after March 23rd, it will do things via the &ldquo;new way&rdquo;.
 
-To resolve this disconnect, I'm going to update the `foobooks` app to the &ldquo;new way&rdquo; and show you how to do it (below). It's totally up to you whether you want to update P2 and P3, as the &ldquo;old way&rdquo; still works perfectly fine.
+To resolve this disconnect, I'm going to update the `foobooks` app to the &ldquo;new way&rdquo; and show you how to do it (below). It's totally up to you whether you want to update P3, as the &ldquo;old way&rdquo; still works perfectly fine.
 
 
 ## Update procedure
