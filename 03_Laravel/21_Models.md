@@ -208,18 +208,18 @@ else {
 
 You'll note in the first example of creating a new book we instantiated a Book object:
 
-```
+```php
 $book = new \App\Book();
 ```
 
 In this above read example, though, we didn't instantiate an object but instead used the Book as a facade:
 
-```
+```php
 $books = \App\Book::all();
 ```
 
 This could have also been written like so:
-```
+```php
 $book  = new \App\Book();
 $books = $book->all();
 ```
@@ -232,12 +232,12 @@ Either style is fine.
 ## Query Structure
 An Eloquent query may be made up of two methods:
 
-1. The constraint method (optional). Lets you specify only the data you need.
-2. The fetch method. Runs the query and determines what results to get back.
+1. The __constraint method__ (optional). Lets you specify only the data you need.
+2. The __fetch method__. Runs the query and determines what results to get back.
 
 In the above example, we didn't have a constraint, and we used the `all()` fetch method:
 
-```
+```php
 $books = \App\Book::all();
 ```
 
