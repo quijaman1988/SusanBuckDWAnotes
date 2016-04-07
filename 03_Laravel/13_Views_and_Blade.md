@@ -190,7 +190,7 @@ Let's apply template inheritance to our book example thus far and start by creat
 In this new file, add these contents:
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>
