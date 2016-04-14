@@ -210,7 +210,7 @@ Now that we have an authors table and seeder, we should modify the existing `Boo
 public function run()
 {
 
-    $author_id = \App\Author::where('last_name','=','Fitzgerald')->pluck('id');
+    $author_id = \App\Author::where('last_name','=','Fitzgerald')->pluck('id')->first();
     DB::table('books')->insert([
     'created_at' => Carbon\Carbon::now()->toDateTimeString(),
     'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
@@ -221,7 +221,7 @@ public function run()
     'purchase_link' => 'http://www.barnesandnoble.com/w/the-great-gatsby-francis-scott-fitzgerald/1116668135?ean=9780743273565',
     ]);
 
-    $author_id = \App\Author::where('last_name','=','Plath')->pluck('id');
+    $author_id = \App\Author::where('last_name','=','Plath')->pluck('id')->first();
     DB::table('books')->insert([
     'created_at' => Carbon\Carbon::now()->toDateTimeString(),
     'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
@@ -232,7 +232,7 @@ public function run()
     'purchase_link' => 'http://www.barnesandnoble.com/w/bell-jar-sylvia-plath/1100550703?ean=9780061148514',
     ]);
 
-    $author_id = \App\Author::where('last_name','=','Angelou')->pluck('id');
+    $author_id = \App\Author::where('last_name','=','Angelou')->pluck('id')->first();
     DB::table('books')->insert([
     'created_at' => Carbon\Carbon::now()->toDateTimeString(),
     'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
