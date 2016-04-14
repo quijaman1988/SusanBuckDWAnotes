@@ -153,7 +153,7 @@ For example, imagine at the top of a script you call upon the `get()` fetch meth
 ```php
 $books = \App\Book::orderBy('id','descending')->get();
 ```
-Within the View, you also want to draw attention to the the most recently added book to the collection.
+Within the View, you also want to draw attention to the most recently added book to the collection.
 
 To gather this info, you could run this query:
 
