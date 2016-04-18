@@ -267,7 +267,7 @@ This concludes our table setup for this relationship. Next, we'll look at how we
 ## Identifying Relationships in Models
 Relationships between tables need to be defined in their corresponding Models via __relationship methods__.
 
-For example, the Author model should have a method called `book()` which returns the Eloquent relationship [hasMany](http://laravel.com/api/5.0/Illuminate/Database/Eloquent/Model.html#method_hasMany):
+For example, the Author model should have a method called `books()` which returns the Eloquent relationship [hasMany](http://laravel.com/api/5.0/Illuminate/Database/Eloquent/Model.html#method_hasMany):
 
 
 ```php
@@ -279,7 +279,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Author extends Model
 
-	public function book() {
+	public function books() {
 		# Author has many Books
 		# Define a one-to-many relationship.
 		return $this->hasMany('\App\Book');
