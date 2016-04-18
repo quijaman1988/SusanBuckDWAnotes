@@ -100,7 +100,7 @@ For example...
 + And a Author Model to interface with a yet-to-be-created `authors` table.
 + Etc.
 
-(In all of our example, our data entities are database tables, but it could be other things, like a JSON API.)
+(In all of our examples, our data entities are database tables, but it could be other things, like a JSON API.)
 
 For each of the core tables in the database, we're going to create a Model class that will interface with that table.
 
@@ -241,7 +241,7 @@ In the above example, we didn't have a constraint, and we used the `all()` fetch
 $books = \App\Book::all();
 ```
 
-The is one of the simplest kind of queries you can do.
+This is one of the simplest kinds of queries you can do.
 
 Most of your queries, however, will be more complex as you'll have certain constraints you'll want to employ.
 
