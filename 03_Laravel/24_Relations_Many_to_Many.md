@@ -21,13 +21,13 @@ To accomplish what we want, we need to implement a *Many to Many* relationship s
     + Ex: If you're joining the `books` table with the `tags` table, the resulting pivot table name would be `book_tag`.
 + Foreign keys:
     + A pivot table links together tables together using __foreign keys__.
-    + Convention says the FK names should be associated the table name, singularized, and appended with `_id`.
+    + Convention says FK field names should consist of the associated table name, singularized, and appended with `_id`.
     + Ex: The FK to the `books` table is `book_id` and the FK to the `tags` table is `tag_id`.
 
 
 <img src='http://making-the-internet.s3.amazonaws.com/laravel-many-to-many-diagram@2x.png' style='max-width:931px; width:100%' alt='Many to Many'>
 
-Before we create the pivot table, lets first get a Migration, Model and Seeder set up for __Tags__...
+Before we create the pivot table, let's first get a Migration, Model and Seeder set up for __Tags__...
 
 
 
