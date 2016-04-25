@@ -196,8 +196,9 @@ __Make sure your migrations and seeds have been run without error before proceed
 
 ## Query relationship example
 Here's what we've accomplished:
+
 1. Created and seeded the `tags` table.
-2. Let our Models (Book and Tag) know about the relationship between one another.
+2. Let our Models (`Book` and `Tag`) know about the relationship between one another.
 3. Created and seeded the `book_tag` table.
 
 With that all set up, we can look at an example of retrieving a single book with its tags:

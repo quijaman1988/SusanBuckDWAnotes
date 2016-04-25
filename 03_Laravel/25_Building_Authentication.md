@@ -158,6 +158,7 @@ Below is code you can use for `resources/views/auth/login.blade.php`:
 ```
 
 Here are the key points about this particular view:
+
 1. It implements the template inheritance strategy we've been using for all of our foobook's views
 2. It's prepared to display errors
 3. It makes sure the form has the CSRF token (done with the `csrf_field()` method)
