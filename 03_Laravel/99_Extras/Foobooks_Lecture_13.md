@@ -112,7 +112,7 @@ Make sure the author dropdown has the appropriate error output:
 ## Handling bad ids
 ```php
 if(is_null($book)) {
-    \Session::flash('flash_message','Book not found');
+    \Session::flash('message','Book not found');
     return redirect('/books');
 }
 ```
@@ -261,7 +261,7 @@ public function user() {
 
 Add this to `User.php`:
 ```php
-public function book() {
+public function books() {
     return $this->hasMany('\App\Book');
 }
 ```
@@ -351,7 +351,7 @@ class WelcomeController extends Controller {
 
         # Logged in users should not see the welcome page, send them to the books index instead.
         if(\Auth::check()) {
-            return redirect()->to('/books');
+            return redirect('/books');
         }
 
         return view('welcome.index');
@@ -419,20 +419,20 @@ Route::get('/books/delete/{id?}', 'BookController@getDoDelete');
 Two new methods in BookController.php:
 
 ```php
-public function getConfirmDelete($book_id) {
+public function getConfirmDelete($id) {
 
-    $book = \App\Book::find($book_id);
+    $book = \App\Book::find($id);
 
     return view('books.delete')->with('book', $book);
 }
 
-public function getDoDelete($book_id) {
+public function getDoDelete($id) {
 
     # Get the book to be deleted
-    $book = \App\Book::find($book_id);
+    $book = \App\Book::find($id);
 
     if(is_null($book)) {
-        \Session::flash('flash_message','Book not found.');
+        \Session::flash('message','Book not found.');
         return redirect('\books');
     }
 
@@ -445,7 +445,7 @@ public function getDoDelete($book_id) {
     $book->delete();
 
     # Done
-    \Session::flash('flash_message',$book->title.' was deleted.');
+    \Session::flash('message',$book->title.' was deleted.');
     return redirect('/books');
 
 }
@@ -464,7 +464,7 @@ One new view:
 @section('content')
     <h1>Delete Book</h1>
     <p>Are you sure you want to delete <em>{{$book->title}}</em>?</p>
-    <p><a href='/books/delete/{{$book->id}}'>Yes...</a></p>
+    <p><a href='/book/delete/{{$book->id}}'>Yes...</a></p>
 @stop
 ```
 
