@@ -167,7 +167,3 @@ See `vendor/laravel/framework/src/Illuminate/Auth.php` for more details.
 __Default Cookie name__
 
 By default the Cookie name Laravel uses is `laravel_session`, but you can overwrite this in `/app/config/session.php`.
-
-__Getting rid of old sessions__
-
-[TODO]

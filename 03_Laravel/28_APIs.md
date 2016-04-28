@@ -102,10 +102,10 @@ $jsonStringResults = file_get_contents($apiUrl);
 $data = json_decode($jsonStringResults, true);
 
 # Show all the data
-dump($books);
+dump($data);
 
 # Loop through the data printing just the title for each book
-foreach($books['items'] as $book) {
+foreach($data['items'] as $book) {
     echo $book['volumeInfo']['title'].'<br>';
 }
 ```

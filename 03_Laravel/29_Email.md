@@ -89,7 +89,7 @@ In a practice route/controller set up the following; replace `your@email.com` be
 
 ```php
 \Mail::send([], [], function ($message) {
-  $message->to('susanbuck@fas.harvard.edu')
+  $message->to('your@email.com')
     ->subject('Hello World')
     ->setBody('This is a test message; Testing 123.');
 });
@@ -152,7 +152,7 @@ You'll note that there's two main data points we'll need to provide this view:
 ### Program the email
 In another practice controller action, set up the following code:
 
-```
+```php
 # Get the current logged in user
 $user = \Auth::user();
 
@@ -211,7 +211,7 @@ Example output of email piped to `laravel.log`:
 Date: Thu, 28 Apr 2016
 Subject: The book The Great Gatsby is now available on Foobooks
 From: Foobooks <mail@foobooks.com>
-To: Susan <susanbuck@fas.harvard.edu>
+To: Susan <dwa15.practice@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/html; charset=utf-8
 Content-Transfer-Encoding: quoted-printable
