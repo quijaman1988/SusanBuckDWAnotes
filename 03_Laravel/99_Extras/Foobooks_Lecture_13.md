@@ -28,7 +28,7 @@ class GoogleBooks {
     public function __construct() {
         $this->client = new \Google_Client();
         $this->client->setApplicationName("Client_Library_Examples");
-        $this->client->setDeveloperKey(\Config::get('api.google_client_developer_key'));
+        $this->client->setDeveloperKey(\Config::get('apis.google_api_key'));
     }
 
     /**

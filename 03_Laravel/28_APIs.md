@@ -60,7 +60,7 @@ The process for interacting with a read-only API is relatively simple:
 
 For example, here's an API URL for Google Books:
 
-<https://www.googleapis.com/books/v1/volumes?q=author:maya%20angelou&maxResults=5&key=AIzaSyDkh-4eS9qmNq10lu-AlHLRxONBxK-gJ8I>
+<https://www.googleapis.com/books/v1/volumes?q=author:maya%20angelou&maxResults=5&key=AIzaSyAuSWKAk2iFAK-uzg-RKCS6L5spPjc46VM>
 
 The URL typically includes both the API **method** you're pinging, and **parameters** for the query.
 
@@ -68,7 +68,7 @@ In this example, the method is `volumes` and the parameters are:
 
 + `q` (short for query) = `maya%20angelou` (the `%20` is just an encoded space)
 + `maxResults` = `5`
-+ `key` = `AIzaSyDkh-4eS9qmNq10lu-AlHLRxONBxK-gJ8I`
++ `key` = `AIzaSyAuSWKAk2iFAK-uzg-RKCS6L5spPjc46VM`
 
 This URL was constructed by reading this documentation: <https://developers.google.com/books/docs/v1/reference/volumes/list>
 
@@ -81,7 +81,7 @@ You have just interacted with the Google Books API! Now we just need to do that 
 One way this can be accomplished is using PHP's built in method [file_get_contents()](http://php.net/manual/en/function.file-get-contents.php). Try this out in a practice controller or route:
 
 ```php
-$apiUrl = "https://www.googleapis.com/books/v1/volumes?q=author:maya%20angelou&langRestrict=en&maxResults=5";
+$apiUrl = "https://www.googleapis.com/books/v1/volumes?q=author:maya%20angelou&langRestrict=en&maxResults=5&key=AIzaSyAuSWKAk2iFAK-uzg-RKCS6L5spPjc46VM";
 $jsonStringResults = file_get_contents($apiUrl);
 print $jsonStringResults;
 ```
@@ -96,7 +96,7 @@ Obviously a large JSON string in this format is not very useful, so the next ste
 Update your above example to look like this:
 
 ```php
-$apiUrl = "https://www.googleapis.com/books/v1/volumes?q=author:maya%20angelou&langRestrict=en&maxResults=5";
+$apiUrl = "https://www.googleapis.com/books/v1/volumes?q=author:maya%20angelou&langRestrict=en&maxResults=5&key=AIzaSyAuSWKAk2iFAK-uzg-RKCS6L5spPjc46VM";
 $jsonStringResults = file_get_contents($apiUrl);
 
 $data = json_decode($jsonStringResults, true);
@@ -114,7 +114,7 @@ That should produce something like this, which gives you an idea of how you can 
 
 <img src='http://making-the-internet.s3.amazonaws.com/laravel-books-api-results-decoded@2x.png' style='max-width:651px; width:100%' alt=''>
 
-Note how the key information we want is nested within the key `volumeInfo`. You'll often have to study API results to get a sense of how the data is structured so you know how to extract out the information you want.
+Note how the information we want is nested within the index `volumeInfo`. You'll often have to study API results to get a sense of how the data is structured so you know how to extract out the information you want.
 
 Can you start to imagine how the above code could be used to build a &ldquo;*Similar books by this author*&rdquo; feature on Foobooks?
 
@@ -206,24 +206,24 @@ You can create separate configs for each API you use, or put all your API keys i
 
 For Foobooks, I'll do the latter...
 
-Create a new file `/config/api.php` and fill it with this code:
+Create a new file `/config/apis.php` and fill it with this code:
 
 ```php
 <?php
 return [
-    'google_client_developer_key' => 'PASTE-YOUR-KEY-HERE'
+    'google_api_key' => 'PASTE-YOUR-KEY-HERE'
 ];
 ```
 
 Then, when the API key is needed it's used like this:
 
 ```php
-\Config::get('api.google_client_developer_key')
+\Config::get('apis.google_api_key')
 ```
 
 For example:
 ```php
-$client->setDeveloperKey(\Config::get('api.google_client_developer_key'));
+$client->setDeveloperKey(\Config::get('apis.google_api_key'));
 ```
 
 
