@@ -93,7 +93,7 @@ Demo:
 Here's a rundown of the essential pieces of how this is working:
 
 Two routes:
-```
+```php
 Route::get('/book/search', 'BookController@getSearch');
 Route::post('/book/search', 'BookController@postSearch');
 ```
@@ -104,8 +104,15 @@ The second route (POST) will respond to the ajax call requesting books.
 
 
 ## GET /search/book - Show form to search for book
-For the GET route, set up the BookController@getSearch method so that it returns a view called `search.blade.php` with the following contents:
+For the GET route, set up the BookController@getSearch method so that it returns a view called `search.blade.php`
 
+```php
+public function getSearch() {
+	return view('books.search');
+}
+```
+
+The `books.search` view should be created at (`/resources/views/books/search.blade.php`) and include the following contents:
 ```php
 @extends('layouts.master')
 
