@@ -232,9 +232,7 @@ Team Foobooks
 </p>
 ```
 
-Alternatively, you can use a service such as [Mailtrap](http://mailtrap.io) which will pipe all outgoing email into a single development inbox.
-
-
+Alternatively, you can use a service such as [Mailtrap](http://mailtrap.io) which will pipe all outgoing email into a single development inbox (discussed in lecture).
 
 
 
