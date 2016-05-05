@@ -212,6 +212,12 @@ At this point you have a GET route to show the form, and a POST route to respond
 Create `/public/js/search.js` and fill it with this code:
 
 ```js
+// Because the form "submission" is being handled by Ajax,
+// we don't want the form to actually submit if the user hits the Enter key
+$('form').submit(function() {
+    event.preventDefault();
+});
+
 // The following anonymous function will trigger every time the key goes up
 // in the search input; i.e. someone changes the search input.
 $('#search').keyup(function() {
