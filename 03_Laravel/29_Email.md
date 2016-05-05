@@ -2,7 +2,6 @@
 
 Just like Laravel supports different database drivers, it also supports different mail drivers.
 
-
 `/config/mail.php`:
 
 ```php
@@ -36,7 +35,9 @@ From your Mailgun control panel (<https://mailgun.com/app/dashboard>) locate the
 
 <img src='http://making-the-internet.s3.amazonaws.com/laravel-mailgun-default-credentials@2x.png' class='' style='max-width:600px; width:100%' alt=''>
 
-This sandbox account is only for testing, so there's a 300 email limit a day. When you're ready to go live with your application, you'd want to authorize your own domain to send emails.
+This sandbox account is only for testing, so there's a 300 email limit a day. When you're ready to go live with your application, you'd want to verify your own domain to send emails.
+
+<small>Namecheap users will want to follow [these supplemental instructions](https://github.com/susanBuck/dwa15-spring2016-notes/blob/master/03_Laravel/99_Extras/Verify-Mailgun-Domain-Namecheap.md) for verifying domains, but don't do that until you get the sandbox account working following the steps below.</small>
 
 
 
