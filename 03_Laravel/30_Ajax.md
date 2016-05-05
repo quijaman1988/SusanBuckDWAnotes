@@ -5,17 +5,34 @@ To start, we'd have some view with a form like this:
 ```html
 <form method='POST' action='/book/search'>
 
+	{{ csrf_token() }}
+
 	<input type='text' name='searchTerm'>
 
-	<input type='submit'>
+	<input type='submit' value='Submit'>
+
 </form>
 ```
 
-Given a form like this, the user would enter a search term and hit the Submit button.
+The user would enter a search term and hit the Submit button.
 
 The form would submit to the POST route `/book/search`, including the data (`searchTerm`).
 
-The POST route `/book/search/` would receive the data and perform a query against the Book model, retrieving the matching books. Then it might redirect the user to another GET route that had the following view to display the books:
+The POST route `/book/search/` would receive the data and perform a query against the Book model, retrieving the matching books. Then it could return a view that's prepared to display the books.
+
+For example:
+```php
+public function postSearch(Request $request) {
+
+    # Do the search with the provided search term
+    $books = \App\Book::where('title','LIKE','%'.$request->searchTerm.'%')->get();
+
+	# Return the view with the books
+    return view('books.search-ajax')->with('books',$books);
+}
+```
+
+The view to display the books might like this:
 
 ```php
 @extends('layouts.master')
