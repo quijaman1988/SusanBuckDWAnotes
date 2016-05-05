@@ -112,7 +112,7 @@ public function getSearch() {
 }
 ```
 
-The `books.search` view should be created at (`/resources/views/books/search.blade.php`) and include the following contents:
+The `books.search` view should be created (`/resources/views/books/search.blade.php`) and include the following contents:
 ```php
 @extends('layouts.master')
 
@@ -156,13 +156,13 @@ The `books.search` view should be created at (`/resources/views/books/search.bla
 
 Note the following points about the above view:
 + There's a form with a csrf token, and a text input for the `searchTerm`.
-+ There's an empty div with the id #results; this is where results from the ajax call will be written to.
-+ There's a span with the text `Loading...` that is set to be invisible on page load. Your JS will make this span visible when waiting for an ajax response, and then invisible when the response is complete.
++ There's an empty div with the id `results`; this is where results from the ajax call will be written to.
++ There's a span with the id `loading` and the text `Loading...` that is set to be invisible on page load. Your JS will make this span visible when waiting for an ajax response, and then invisible when the response is complete.
 + A file `/js/search.js` is included at the bottom. The JS to handle the ajax call will go in that file; we'll come back to it in a moment.
 
 
 ## POST /search/book - Responds to ajax request for books
-The POST route needs to accept a POST request with the data `searchTerm`. This data is used to perform a query with the Book model and returns a view called `books.search-ajax`.
+The POST action uses `searchTerm` from the request data, performs a query on the Book model, and returns a view called `books.search-ajax`.
 
 That code looks like this:
 
@@ -202,7 +202,7 @@ Create `/resources/views/books/search-ajax.blade.php` with this code:
 
 Note how this view loops through `$books`, which it'll receive from the controller.
 
-Also note how it's a fragment template&mdash; it does not extend the master layout. That's because this view is not intended to be used in isolation, but as an ajax response that gets injected into some existing page.
+Also note how it's a fragment template&mdash; it does not extend the master layout. That's because this view is not intended to be used in isolation, but as an ajax response that JavaScript will inject into the `#results` div.
 
 
 
