@@ -1,22 +1,43 @@
-To understand ajax, lets first look at how we've been processing forms up until this point:
+To understand ajax, lets imagine a page to search for books, built using the techniques we've explored thus far...
 
-In some view we'd have a form like this:
+To start, we'd have some view with a form like this:
 
 ```html
-<form method='POST' action='/book/update'>
+<form method='POST' action='/book/search'>
 
-	[...Input fields for book data like
-	title, author, published date, etc...]
+	<input type='text' name='searchTerm'>
 
 	<input type='submit'>
 </form>
 ```
 
-With a form like this, when the user hit the submit button, it would submit the form, directing the user to `/book/update`, including the data from the form.
+Given a form like this, the user would enter a search term and hit the Submit button.
 
-That page (which in our case is a route/controller action) then handled the data and responded somehow, whether it be to display a confirmation message, redirect the user somewhere else, etc.
+The form would submit to the POST route `/book/search`, including the data (`searchTerm`).
 
-The key part of the above interaction is that to submit the form data, you submitted a new page request to the server. The benefit of ajax is avoiding this page request.
+The POST route `/book/search/` would receive the data and perform a query against the Book model, retrieving the matching books. Then it might redirect the user to another GET route that had the following view to display the books:
+
+```php
+@extends('layouts.master')
+
+@section('title')
+    Search results
+@stop
+
+@section('content')
+	@if(sizeof($books) == 0)
+		No results found.
+	@endif
+
+	@foreach($books as $book)
+		<div class='book'>
+			<a href='/book/show/{{$book->id}}'>{{ $book->title }}</a>
+		</div>
+	@endforeach
+@stop
+```
+
+The key part of the above interaction is that the entire page submitted in order to fetch the search results. __The purpose of ajax is avoiding this full page request.__
 
 Imagine doing the following actions...
 
@@ -49,7 +70,6 @@ Let's break down the different pieces:
 <img src='http://making-the-internet.s3.amazonaws.com/laravel-ajax-search-for-books.gif'>
 
 Demo:
-
 + <http://foobooks.dwa15-practice.biz/book/search>
 + Login with `jill@harvard.edu` / `helloworld`
 
@@ -92,10 +112,10 @@ For the GET route, set up the BookController@getSearch method so that it returns
            <label>Search for a book title, e.g. 'Gatsby' or 'Caged Bird':</label>
             <input
                 type='text'
-                id='search'
-                name='search'
+                id='searchTerm'
+                name='searchTerm'
             >
-            <i id='loading' class="fa fa-refresh fa-spin"></i>
+            <span id='loading' style='display:none'>Loading...</span>
         </div>
 
         <h2>Results:</h2>
@@ -111,13 +131,14 @@ For the GET route, set up the BookController@getSearch method so that it returns
 ```
 
 Note the following points about the above view:
-+ There's a form with a csrf token, and a text input for the search term.
++ There's a form with a csrf token, and a text input for the `searchTerm`.
 + There's an empty div with the id #results; this is where results from the ajax call will be written to.
++ There's a span with the text `Loading...` that is set to be invisible on page load. Your JS will make this span visible when waiting for an ajax response, and then invisible when the response is complete.
 + A file `/js/search.js` is included at the bottom. The JS to handle the ajax call will go in that file; we'll come back to it in a moment.
 
 
 ## POST /search/book - Responds to ajax request for books
-For the POST route, it's set up to respond to a POST request that sends a search term (`search`). It uses this value to perform a query on the books table and returns a view called `books.search-ajax`.
+The POST route needs to accept a POST request with the data `searchTerm`. This data is used to perform a query with the Book model and returns a view called `books.search-ajax`.
 
 That code looks like this:
 
@@ -128,9 +149,11 @@ That code looks like this:
 * See /public/js/search.js
 */
 public function postSearch(Request $request) {
-    # Do the search with the provided search term ($request->search)
-    $books = \App\Book::where('title','LIKE','%'.$request->search.'%')->get();
-    # Return the view with the books
+
+    # Do the search with the provided search term
+    $books = \App\Book::where('title','LIKE','%'.$request->searchTerm.'%')->get();
+
+	# Return the view with the books
     return view('books.search-ajax')->with(
         ['books' => $books]
     );
@@ -181,7 +204,7 @@ $('#search').keyup(function() {
         dataType : 'html', // Kind of data we're expecting to get back
         data: { // Two pieces of data we'll send with the request
             '_token': $('input[name=_token]').val(),
-            'search': $('#search').val()
+            'searchTerm': $('#searchTerm').val()
         },
         // What to do before each ajax
         beforeSend: function() {
